@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRIVARDHAN Project</title>
+    <script src="https://unpkg.com/react@19/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@19/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .welcome {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        const { useState } = React;
+        
+        function App() {
+            const [count, setCount] = useState(0);
+            
+            return (
+                <div className="container">
+                    <h1 className="header">Welcome to SRIVARDHAN Project</h1>
+                    <div className="welcome">
+                        <h2>React Application is Running!</h2>
+                        <p>This is a basic React application that has been set up for you.</p>
+                        <p>Current count: <strong>{count}</strong></p>
+                        <button 
+                            onClick={() => setCount(count + 1)}
+                            style={{
+                                padding: '10px 20px',
+                                fontSize: '16px',
+                                backgroundColor: '#2196F3',
+                                color: 'white',
+                                border: 'none',
+                                borderRadius: '5px',
+                                cursor: 'pointer'
+                            }}
+                        >
+                            Increment Counter
+                        </button>
+                    </div>
+                    <div>
+                        <h3>Project Structure:</h3>
+                        <ul>
+                            <li>Frontend directory: Ready for React components</li>
+                            <li>Base directory: Ready for backend services</li>
+                            <li>Node.js dependencies: React 19 installed</li>
+                        </ul>
+                    </div>
+                </div>
+            );
+        }
+        
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>
+
